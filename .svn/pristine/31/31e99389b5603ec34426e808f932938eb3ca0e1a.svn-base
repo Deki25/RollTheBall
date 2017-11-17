@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollTheBallwc", "RollTheBallwc.csproj", "{CD3E9A01-E7EF-06C2-41B4-FC96DF48E567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollTheBallwc.Editor", "RollTheBallwc.Editor.csproj", "{12B8BE29-4D1A-016C-4A55-789B229CFDB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD3E9A01-E7EF-06C2-41B4-FC96DF48E567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3E9A01-E7EF-06C2-41B4-FC96DF48E567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3E9A01-E7EF-06C2-41B4-FC96DF48E567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3E9A01-E7EF-06C2-41B4-FC96DF48E567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B8BE29-4D1A-016C-4A55-789B229CFDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B8BE29-4D1A-016C-4A55-789B229CFDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B8BE29-4D1A-016C-4A55-789B229CFDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B8BE29-4D1A-016C-4A55-789B229CFDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

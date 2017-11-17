@@ -1,0 +1,55 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class FinishLevelMenager : MonoBehaviour
+{
+    PlayerMovement playerMove;
+    CameraMovement cameraScript;
+    finishTrigger finishTr;
+    startTrigger startTr;
+
+    public GameObject Player;
+    public GameObject FinishLine;
+    public GameObject StartLine;
+    public Text FinishText;
+
+    void Start()
+    {
+        playerMove = Player.GetComponent<PlayerMovement>();
+        cameraScript = Camera.main.GetComponent<CameraMovement>();
+        finishTr = FinishLine.GetComponent<finishTrigger>();
+        startTr = StartLine.GetComponent<startTrigger>();
+    }
+
+    public void NextLevel(string nextLevel)
+    {
+        SceneManager.LoadScene(nextLevel);
+    }
+	
+
+    public void Retry()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        startTr.timer = 0f;
+        FinishText.text = "";
+        finishTr.finished = false;
+        Player.GetComponent<PlayerMovement>().isFinished = false;
+        cameraScript.finishLerp = 0;
+        cameraScript.FinishMenu.SetActive(false);
+        Player.transform.position = playerMove.startPosition;
+        cameraScript.isSpawning = true;
+        cameraScript.CameraAliveMovement();
+    }
+
+    public void BackToMenu(string backTo)
+    {
+        SceneManager.LoadScene(backTo);
+    }
+	void Update () 
+	{
+        FinishText.text = startTr.TimerText.text;
+    }
+}

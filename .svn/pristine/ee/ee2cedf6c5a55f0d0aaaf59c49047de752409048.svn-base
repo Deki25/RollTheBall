@@ -1,0 +1,19 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CoinMenager : MonoBehaviour 
+{
+    public static int money = 0;
+
+    private void OnTriggerEnter(Collider coli)
+    {
+        if (coli.tag == "Player")
+        {
+            gameObject.SetActive(false);
+            money++;
+            Debug.Log(money);
+            //Destroy(gameObject);
+        }
+    }
+}
